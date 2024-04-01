@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProveedoresAPI.Models;
 using ProveedoresAPI.Repositories;
 
 
 namespace ProveedoresAPI.Controllers
 {   [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class ProveedorController : Controller
     {
