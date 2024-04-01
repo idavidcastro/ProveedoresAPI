@@ -42,7 +42,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+//agregado
 app.UseAuthentication();
 
 app.UseAuthorization();
