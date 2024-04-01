@@ -1,6 +1,6 @@
 ﻿using MongoDB.Driver;
 
-namespace ProveedoresAPI.Repositories
+namespace ProveedoresAPI.Infrastructure
 {
     public class MongoDBRepository
     {

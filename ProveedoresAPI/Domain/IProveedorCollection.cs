@@ -1,6 +1,6 @@
-﻿using ProveedoresAPI.Models;
+﻿using ProveedoresAPI.Domain.Models;
 
-namespace ProveedoresAPI.Repositories
+namespace ProveedoresAPI.Domain
 {
     public interface IProveedorCollection
     {
@@ -9,6 +9,6 @@ namespace ProveedoresAPI.Repositories
         Task DeleteProveedor(string id);
 
         Task<List<Proveedor>> GetAllProveedors();
-        Task<Proveedor> GetProveedorById(string id); 
+        Task<Proveedor> GetProveedorById(string id);
     }
 }

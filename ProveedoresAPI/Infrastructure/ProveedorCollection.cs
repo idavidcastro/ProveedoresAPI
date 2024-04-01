@@ -1,8 +1,9 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
-using ProveedoresAPI.Models;
+using ProveedoresAPI.Domain;
+using ProveedoresAPI.Domain.Models;
 
-namespace ProveedoresAPI.Repositories
+namespace ProveedoresAPI.Infrastructure
 {
     public class ProveedorCollection : IProveedorCollection
     {
@@ -16,12 +17,12 @@ namespace ProveedoresAPI.Repositories
         public async Task DeleteProveedor(string id)
         {
             var filter = Builders<Proveedor>.Filter.Eq(s => s.Id, new ObjectId(id));
-                await Collection.DeleteOneAsync(filter);
+            await Collection.DeleteOneAsync(filter);
         }
 
         public async Task<List<Proveedor>> GetAllProveedors()
         {
-            return await Collection.FindAsync(new BsonDocument ()).Result.ToListAsync();
+            return await Collection.FindAsync(new BsonDocument()).Result.ToListAsync();
 
         }
 
@@ -37,7 +38,7 @@ namespace ProveedoresAPI.Repositories
 
         public async Task UpdateProveedor(Proveedor proveedor)
         {
-            var filter = Builders<Proveedor>.Filter.Eq(s=>s.Id, proveedor.Id);
+            var filter = Builders<Proveedor>.Filter.Eq(s => s.Id, proveedor.Id);
             await Collection.ReplaceOneAsync(filter, proveedor);
         }
     }

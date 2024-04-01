@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace ProveedoresAPI.Models
+namespace ProveedoresAPI.Domain.Models
 {
     public class Proveedor
     {

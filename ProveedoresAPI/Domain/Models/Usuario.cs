@@ -1,4 +1,4 @@
-﻿namespace ProveedoresAPI.Models
+﻿namespace ProveedoresAPI.Domain.Models
 {
     public class Usuario
     {
